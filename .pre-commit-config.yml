@@ -1,0 +1,50 @@
+repos:
+  # ---------------------------
+  # Code Auto-formatting (Black)
+  # ---------------------------
+  - repo: https://github.com/psf/black
+    rev: 24.3.0
+    hooks:
+      - id: black
+        language_version: python3.11
+
+  # ---------------------------
+  # Ruff (Lint + Auto-fix)
+  # ---------------------------
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.6.0
+    hooks:
+      - id: ruff
+      - id: ruff-format
+
+  # ---------------------------
+  # General sanity checks
+  # ---------------------------
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: check-yaml
+      - id: check-json
+      - id: check-toml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+
+  # ---------------------------
+  # Detect secrets (prevent accidents)
+  # ---------------------------
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.4.0
+    hooks:
+      - id: detect-secrets
+        args: ["--baseline", ".secrets.baseline"]
+
+  # ---------------------------
+  # Optional: run Pytest on small files
+  # (only runs tests touched by the commit)
+  # ---------------------------
+  - repo: https://github.com/pre-commit/mirrors-pytest
+    rev: v7.4.0
+    hooks:
+      - id: pytest
+        additional_dependencies: []
+        stages: [commit]

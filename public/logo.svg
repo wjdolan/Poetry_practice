@@ -1,0 +1,7 @@
+﻿<svg width="160" height="44" viewBox="0 0 160 44" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Company Logo</title>
+  <desc id="desc">Abstract mark with letter C</desc>
+  <rect x="0.5" y="0.5" width="159" height="43" rx="10" fill="#316bff" fill-opacity="0.08" stroke="#316bff"/>
+  <path d="M27 13c-6.6 0-12 5.4-12 12s5.4 12 12 12c4.4 0 8.3-2.4 10.4-5.9l-4.3-2.5A8 8 0 1 1 27 21.1h9.5c-.9-4.6-5-8.1-9.5-8.1Z" fill="#316bff"/>
+  <text x="60" y="29" fill="#0f172a" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-size="18" font-weight="700">Company Name</text>
+</svg>
